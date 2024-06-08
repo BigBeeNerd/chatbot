@@ -54,7 +54,7 @@
       "Reading books is a great way to learn new things.",
       "Exercising regularly has many health benefits.",
       "BigBeeNerd/Beep is a great youtuber!",
-      "A pixel is a two dimensional square where many make a screen like yours! A voxel is the same thing, but three dimensional, and used in 3d modeling instead.",
+      "A pixel is a two dimensional square where many make a screen like yours A voxel is the same thing, but three dimensional, and used in 3d modeling instead.",
       "One piece is a good anime.",
       "Clefairy was going to be the mascot of pokemon until Pikachu became more popular and known amongst people!"
     ];
@@ -63,15 +63,11 @@
 
     function shareOpinions() {
       const opinionsDiv = document.getElementById("opinions");
-      opinionsDiv.innerHTML = "";
-
-      for (let i = 0; i < 1; i++) {
-        const randomIndex = Math.floor(Math.random() * opinions.length);
-        const opinionParagraph = document.createElement("p");
-        opinionParagraph.textContent = opinions[randomIndex];
-        opinionsDiv.appendChild(opinionParagraph);
-        factCount++;
-      }
+      const randomIndex = Math.floor(Math.random() * opinions.length);
+      const opinionParagraph = document.createElement("p");
+      opinionParagraph.textContent = opinions[randomIndex];
+      opinionsDiv.appendChild(opinionParagraph);
+      factCount++;
     }
   </script>
 </body>
