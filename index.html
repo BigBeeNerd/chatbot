@@ -40,14 +40,31 @@
 </head>
 <body>
   <div class="chatbot">
-    <h2>Chatbot</h2>
-    <p>Hi, I'm a chatbot. I have some opinions to share with you.</p>
-    <button>Share Opinions</button>
+    <h2>Random Information Bot</h2>
+    <p>Click for some random facts!</p>
+    <button onclick="shareOpinions()">Facts</button>
     <div id="opinions"></div>
   </div>
 
   <script>
-    // Add your chatbot logic here
+    const opinions = [
+      "1+1+2",
+      "Russia is the largest country in the world.",
+      "The sky is blue because of the way light interacts with the atmosphere.",
+      "Reading books is a great way to learn new things.",
+      "Exercising regularly has many health benefits."
+    ];
+
+    function shareOpinions() {
+      const opinionsDiv = document.getElementById("opinions");
+      opinionsDiv.innerHTML = "";
+
+      for (let i = 0; i < opinions.length; i++) {
+        const opinionParagraph = document.createElement("p");
+        opinionParagraph.textContent = opinions[i];
+        opinionsDiv.appendChild(opinionParagraph);
+      }
+    }
   </script>
 </body>
 </html>
